@@ -1,3 +1,20 @@
+#' Plot a fill-less half pitch for an understat shotmap. 
+#' 
+#' @param filler the colour you want your lines to be. 
+#' @return a ggplot annotation half pitch. 
+#' @examples
+#' library(understatr)
+#' library(ggplot2)
+#' 
+#' data <- get_player_shots(629) 
+#'
+#' ggplot(data = data, aes(x = X, y = Y, size = xG, 
+#'                         colour = result,
+#'                         shape = shotType, fill = result),
+#'        alpha = 0.7) +
+#'   pitch_us() +
+#'   geom_point()
+
 pitch_us <- function(filler = "#2f4f4f"){list(#half pitch
 #right touchline
 annotate("segment",x = 0.6, xend = 1, y = 0, yend = 0, colour = filler, 
