@@ -2,18 +2,20 @@
 % Please edit documentation in R/pitch_us.R
 \name{pitch_us}
 \alias{pitch_us}
-\title{Plot a fill-less half pitch for an understat shotmap.}
+\title{Plot a transparent half pitch for an understat shotmap.}
 \usage{
 pitch_us(filler = "#2f4f4f")
 }
 \arguments{
-\item{filler}{the colour you want your lines to be.}
+\item{filler}{the colour you want your pitch lines to be. there is no
+background colour option, please use plot.background and panel.background. this
+is so the pitch can be plotted over heatmaps.}
 }
 \value{
 a ggplot annotation half pitch.
 }
 \description{
-Plot a fill-less half pitch for an understat shotmap.
+Plot a transparent half pitch for an understat shotmap.
 }
 \examples{
 library(understatr)
