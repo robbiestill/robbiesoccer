@@ -48,6 +48,9 @@ annotate("segment",x = 0.6, xend = 1, y = 0, yend = 0, colour = filler,
   ylim(1,0),
   theme(axis.line = element_blank(),
         axis.text = element_blank(),
-        axis.title = element_blank()))
+        axis.title = element_blank(), 
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(), 
+        ))
   }
 
