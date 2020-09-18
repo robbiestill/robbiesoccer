@@ -18,9 +18,10 @@
 #'   pitch_us() +
 #'   geom_point()
 
-pitch_us <- function(filler = "#2f4f4f"){list(#half pitch
-#right touchline
-annotate("segment",x = 0.6, xend = 1, y = 0, yend = 0, colour = filler,
+pitch_us <- function(filler = "#2f4f4f"){list(
+  #half pitch
+  #right touchline
+  annotate("segment",x = 0.6, xend = 1, y = 0, yend = 0, colour = filler,
          size = 0.6) ,
   #left touchline
   annotate("segment",x = 0.6, xend = 1, y = 1, yend = 1, colour = filler,
@@ -43,7 +44,7 @@ annotate("segment",x = 0.6, xend = 1, y = 0, yend = 0, colour = filler,
   annotate("path", x=0.885-0.091*cos(seq(-0.295*pi,0.295*pi,length.out=30)),
            size = 0.6,
            y=0.498+0.116*sin(seq(-0.3*pi,0.3*pi,length.out=30)), col=filler) ,
-  coord_flip(),
+  coord_flip(clip = "off"),
   xlim(0.6, 1.01),
   ylim(1,0),
   theme(axis.line = element_blank(),
